@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Miantuan pet entry",
+  "type": "object",
+  "required": ["id", "name", "owner", "tagline", "introduction", "forms", "codexPet", "assets", "install"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$"
+    },
+    "name": { "$ref": "#/$defs/localizedString" },
+    "owner": {
+      "type": "object",
+      "required": ["github", "display"],
+      "properties": {
+        "github": { "type": "string" },
+        "display": { "type": "string" }
+      }
+    },
+    "statusLabel": { "$ref": "#/$defs/localizedString" },
+    "tagline": { "$ref": "#/$defs/localizedString" },
+    "introduction": { "$ref": "#/$defs/localizedString" },
+    "forms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "$ref": "#/$defs/localizedString" },
+          "description": { "$ref": "#/$defs/localizedString" }
+        }
+      }
+    },
+    "codexPet": {
+      "type": "object",
+      "required": ["manifest", "spritesheet", "states"],
+      "properties": {
+        "manifest": { "type": "string" },
+        "spritesheet": { "type": "string" },
+        "states": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "required": ["preview", "petManifest", "spritesheet"],
+      "additionalProperties": { "type": "string" }
+    },
+    "install": {
+      "type": "object",
+      "required": ["npm", "github"],
+      "properties": {
+        "npm": { "type": "string" },
+        "github": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "required": ["en", "zh-CN"],
+      "properties": {
+        "en": { "type": "string" },
+        "zh-CN": { "type": "string" }
+      }
+    }
+  }
+}

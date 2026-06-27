@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "pets": [
+    {
+      "id": "luma",
+      "entry": "data/pets/luma.json"
+    }
+  ]
+}

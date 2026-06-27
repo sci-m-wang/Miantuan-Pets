@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schemas/pet-entry.schema.json",
+  "id": "luma",
+  "name": {
+    "en": "Luma",
+    "zh-CN": "Luma"
+  },
+  "owner": {
+    "github": "sci-m-wang",
+    "display": "@sci-m-wang"
+  },
+  "statusLabel": {
+    "en": "Three forms",
+    "zh-CN": "三形态"
+  },
+  "tagline": {
+    "en": "@sci-m-wang's imaginary companion.",
+    "zh-CN": "@sci-m-wang 的幻想朋友。"
+  },
+  "introduction": {
+    "en": "Luma is a luminous pegasus-spirit companion reconstructed from childhood memory: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn.",
+    "zh-CN": "Luma 是从童年记忆中重新具像化出来的发光天马灵体伙伴：温柔、神秘、陪伴感强，也有一点成熟姐姐的气质。她以珠光白为主色，带有温暖的棕灰色点缀，较粗的浅色光环微悬在独角上方。"
+  },
+  "forms": [
+    {
+      "id": "humanoid",
+      "name": {
+        "en": "Humanoid companion",
+        "zh-CN": "人形伙伴"
+      },
+      "description": {
+        "en": "A winged teenage spirit form used for calm, social, and attentive desktop states.",
+        "zh-CN": "带翅膀的少女灵体形态，用于安静、互动、等待和专注状态。"
+      }
+    },
+    {
+      "id": "pegasus",
+      "name": {
+        "en": "Pegasus",
+        "zh-CN": "天马"
+      },
+      "description": {
+        "en": "A clean white pegasus form for motion, jumping, and airy movement.",
+        "zh-CN": "干净的白色天马形态，用于移动、跳跃和轻盈动作。"
+      }
+    },
+    {
+      "id": "centaur",
+      "name": {
+        "en": "Pegasus-centaur",
+        "zh-CN": "人马形态"
+      },
+      "description": {
+        "en": "A compact pegasus-centaur form that keeps the upper body readable while preserving the mythic silhouette.",
+        "zh-CN": "紧凑的人马形态，保留可读的上半身和神话感轮廓。"
+      }
+    }
+  ],
+  "codexPet": {
+    "manifest": "assets/pets/luma/pet.json",
+    "spritesheet": "assets/pets/luma/spritesheet.webp",
+    "states": [
+      "idle",
+      "running-right",
+      "running-left",
+      "waving",
+      "jumping",
+      "failed",
+      "waiting",
+      "running",
+      "review"
+    ]
+  },
+  "assets": {
+    "preview": "assets/pets/luma/preview.png",
+    "contactSheet": "assets/pets/luma/contact-sheet.png",
+    "petManifest": "assets/pets/luma/pet.json",
+    "spritesheet": "assets/pets/luma/spritesheet.webp"
+  },
+  "install": {
+    "npm": "npx miantuan-pets install luma",
+    "github": "npm exec github:sci-m-wang/Miantuan-Pets -- install luma"
+  },
+  "license": {
+    "code": "MIT",
+    "petAssets": "Shared by @sci-m-wang for Miantuan Pets gallery use."
+  }
+}

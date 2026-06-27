@@ -1,0 +1,37 @@
+{
+  "name": "miantuan-pets",
+  "version": "0.1.0",
+  "description": "A bilingual gallery and installer for imaginary-friend Codex pets.",
+  "type": "module",
+  "bin": {
+    "miantuan-pets": "./bin/miantuan-pets.mjs"
+  },
+  "files": [
+    "assets",
+    "bin",
+    "data",
+    "schemas",
+    "site",
+    "index.html",
+    "README.md"
+  ],
+  "scripts": {
+    "preview": "python3 -m http.server 4173",
+    "validate": "node scripts/validate.mjs"
+  },
+  "keywords": [
+    "codex",
+    "pets",
+    "imaginary-friend",
+    "gallery",
+    "miantuan"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sci-m-wang/Miantuan-Pets.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

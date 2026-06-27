@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miantuan Pets</title>
+    <link rel="stylesheet" href="./site/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" data-i18n="eyebrow">Imaginary companion gallery</p>
+        <h1 data-i18n="title">Miantuan Pets</h1>
+      </div>
+      <div class="language-switch" aria-label="Language">
+        <button class="lang-button is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-button" data-lang="zh-CN" type="button">中文</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p data-i18n="intro">
+          A gallery of remembered companions, dream friends, and soft little spirits you can bring back to your desktop.
+        </p>
+      </section>
+
+      <section class="gallery" id="gallery" aria-live="polite"></section>
+    </main>
+
+    <template id="pet-card-template">
+      <article class="pet-card">
+        <div class="pet-media">
+          <img class="pet-preview" alt="" />
+        </div>
+        <div class="pet-body">
+          <div class="pet-heading">
+            <div>
+              <p class="owner"></p>
+              <h2></h2>
+            </div>
+            <span class="badge"></span>
+          </div>
+          <p class="tagline"></p>
+          <p class="description"></p>
+          <div class="forms"></div>
+          <div class="install-row">
+            <code></code>
+            <button type="button" class="copy-button" data-i18n-copy="copy">Copy</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="./site/main.js"></script>
+  </body>
+</html>

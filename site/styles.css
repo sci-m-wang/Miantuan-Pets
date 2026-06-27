@@ -1,0 +1,234 @@
+:root {
+  color-scheme: light;
+  --ink: #1e1f20;
+  --muted: #666a73;
+  --line: #dcd7d1;
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+  --accent: #5d7f8d;
+  --accent-2: #a19494;
+  --warm: #f2d18f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px clamp(20px, 5vw, 64px) 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.lang-button,
+.copy-button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lang-button.is-active,
+.copy-button {
+  background: var(--ink);
+  color: white;
+}
+
+main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 40px 0 26px;
+}
+
+.intro p {
+  width: min(760px, 100%);
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
+  line-height: 1.65;
+}
+
+.gallery {
+  display: grid;
+  gap: 24px;
+  padding-bottom: 56px;
+}
+
+.pet-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.pet-media {
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(242, 209, 143, 0.24), transparent 42%),
+    linear-gradient(315deg, rgba(93, 127, 141, 0.16), transparent 44%),
+    #f6f1eb;
+}
+
+.pet-preview {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.pet-body {
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.pet-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.owner,
+.tagline,
+.description,
+.form p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.owner {
+  font-size: 0.92rem;
+}
+
+h2 {
+  margin: 4px 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.badge {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.tagline {
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.description {
+  margin-top: 12px;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.form {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.form h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.install-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+code {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f6f3ef;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pet-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-media {
+    min-height: 260px;
+  }
+
+  .forms {
+    grid-template-columns: 1fr;
+  }
+
+  .install-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

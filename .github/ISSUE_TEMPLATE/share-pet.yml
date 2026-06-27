@@ -1,0 +1,48 @@
+name: Share a pet
+description: Introduce an imaginary friend pet for the Miantuan Pets gallery.
+title: "[pet] "
+labels: ["pet-submission"]
+body:
+  - type: input
+    id: owner
+    attributes:
+      label: Public GitHub handle
+      placeholder: "@your-name"
+    validations:
+      required: true
+  - type: input
+    id: pet-id
+    attributes:
+      label: Pet id
+      description: Lowercase letters, numbers, and hyphens.
+      placeholder: "my-soft-friend"
+    validations:
+      required: true
+  - type: textarea
+    id: intro
+    attributes:
+      label: Bilingual introduction
+      description: Add English and Chinese if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: forms
+    attributes:
+      label: Forms or states
+      description: Describe important forms, states, or transformations.
+    validations:
+      required: true
+  - type: textarea
+    id: assets
+    attributes:
+      label: Pet files or links
+      description: Attach pet.json, spritesheet.webp, previews, or a repository link.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Public sharing
+      options:
+        - label: I only included material I am comfortable making public.
+          required: true
