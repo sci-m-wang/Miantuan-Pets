@@ -4,6 +4,10 @@
     {
       "id": "luma",
       "entry": "data/pets/luma.json"
+    },
+    {
+      "id": "popcorn-xiaoyan",
+      "entry": "data/pets/popcorn-xiaoyan.json"
     }
   ]
 }

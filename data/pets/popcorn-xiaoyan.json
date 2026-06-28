@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schemas/pet-entry.schema.json",
+  "id": "popcorn-xiaoyan",
+  "name": {
+    "en": "Popcorn",
+    "zh-CN": "爆米花"
+  },
+  "owner": {
+    "github": "sci-m-wang",
+    "display": "小焰"
+  },
+  "statusLabel": {
+    "en": "Boar companion",
+    "zh-CN": "野猪伙伴"
+  },
+  "tagline": {
+    "en": "Xiaoyan's imaginary friend.",
+    "zh-CN": "小焰的幻想朋友。"
+  },
+  "introduction": {
+    "en": "Popcorn is Xiaoyan's round red-and-charcoal boar companion: sleepy-eyed, stubborn, a little grumpy, and quietly loyal. He has a white mohawk crest, dramatic white brows, tiny tusks, a peach-pink snout, and white-socked little hooves.",
+    "zh-CN": "爆米花是小焰的红黑圆胖野猪伙伴：眼神困困的，有点倔，有点臭脸，但其实很忠诚。它有白色背鬃、夸张白眉、小獠牙、粉色鼻子，以及像穿了白袜的小蹄子。"
+  },
+  "forms": [
+    {
+      "id": "boar",
+      "name": {
+        "en": "Round boar form",
+        "zh-CN": "圆胖野猪形态"
+      },
+      "description": {
+        "en": "A compact desktop-pet form for grumpy idling, trotting, hoof greetings, jumps, waiting, and focused inspection.",
+        "zh-CN": "适合桌宠使用的紧凑形态，用于臭脸待机、小跑、抬蹄打招呼、跳跃、等待和专注观察。"
+      }
+    }
+  ],
+  "codexPet": {
+    "manifest": "assets/pets/popcorn-xiaoyan/pet.json",
+    "spritesheet": "assets/pets/popcorn-xiaoyan/spritesheet.webp",
+    "states": [
+      "idle",
+      "running-right",
+      "running-left",
+      "waving",
+      "jumping",
+      "failed",
+      "waiting",
+      "running",
+      "review"
+    ]
+  },
+  "assets": {
+    "preview": "assets/pets/popcorn-xiaoyan/preview.png",
+    "contactSheet": "assets/pets/popcorn-xiaoyan/contact-sheet.png",
+    "petManifest": "assets/pets/popcorn-xiaoyan/pet.json",
+    "spritesheet": "assets/pets/popcorn-xiaoyan/spritesheet.webp"
+  },
+  "install": {
+    "npm": "npx miantuan-pets install popcorn-xiaoyan",
+    "github": "npm exec github:sci-m-wang/Miantuan-Pets -- install popcorn-xiaoyan"
+  },
+  "license": {
+    "code": "MIT",
+    "petAssets": "Shared by Xiaoyan via @sci-m-wang for Miantuan Pets gallery use."
+  }
+}
