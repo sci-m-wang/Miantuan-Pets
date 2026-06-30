@@ -60,6 +60,10 @@ function shouldShowCredit(pet, credit) {
   return !(sameName && sameUrl);
 }
 
+function petPageUrl(pet) {
+  return `./pets/${pet.id}/`;
+}
+
 function applyMessages() {
   $$("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
@@ -78,7 +82,12 @@ function renderPets(pets) {
 
   pets.forEach((pet) => {
     const card = template.content.cloneNode(true);
-    $(".pet-preview", card).src = pet.assets.preview;
+    const pageUrl = petPageUrl(pet);
+    const cardRoot = $(".pet-card", card);
+    cardRoot.dataset.href = pageUrl;
+    cardRoot.setAttribute("role", "link");
+    cardRoot.setAttribute("aria-label", `${state.messages.detailsCta}: ${text(pet.name)}`);
+    $(".pet-preview", card).src = pet.assets.animatedPreview || pet.assets.preview;
     $(".pet-preview", card).alt = text(pet.name);
     $("h2", card).textContent = text(pet.name);
     $(".badge", card).textContent = text(pet.statusLabel);
@@ -97,28 +106,19 @@ function renderPets(pets) {
       creditMeta.remove();
     }
 
-    const forms = $(".forms", card);
-    pet.forms.forEach((form) => {
-      const item = document.createElement("section");
-      item.className = "form";
-      const title = document.createElement("h3");
-      title.textContent = text(form.name);
-      const description = document.createElement("p");
-      description.textContent = text(form.description);
-      item.append(title, description);
-      forms.append(item);
-    });
+    const detailsLink = $(".details-link", card);
+    detailsLink.href = pageUrl;
+    detailsLink.textContent = state.messages.detailsCta;
 
-    const command = pet.install?.npm || `npx miantuan-pets install ${pet.id}`;
-    $(".install-label", card).textContent = state.messages.installLabel;
-    $("code", card).textContent = command;
-    $(".copy-button", card).textContent = state.messages.copy;
-    $(".copy-button", card).addEventListener("click", async (event) => {
-      await navigator.clipboard.writeText(command);
-      event.currentTarget.textContent = state.messages.copied;
-      setTimeout(() => {
-        event.currentTarget.textContent = state.messages.copy;
-      }, 1300);
+    cardRoot.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) return;
+      window.location.href = pageUrl;
+    });
+    cardRoot.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      if (event.target.closest("a, button")) return;
+      event.preventDefault();
+      window.location.href = pageUrl;
     });
 
     gallery.append(card);

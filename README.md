@@ -51,6 +51,14 @@ npm run preview
 
 Then open the local URL shown in the terminal.
 
+Regenerate gallery GIF previews from installed spritesheets with:
+
+```bash
+npm run render:previews
+```
+
+如果更新了 spritesheet，可以用上面的命令重新生成宠物馆列表动图。
+
 站点本身不需要账号系统。投稿、审核和发布都通过 GitHub issue 或 pull request 完成。
 
 ## Submit Your Pet / 提交你的宠物
@@ -72,6 +80,8 @@ data/pets/<pet-id>.json
 assets/pets/<pet-id>/pet.json
 assets/pets/<pet-id>/spritesheet.webp
 assets/pets/<pet-id>/preview.png
+assets/pets/<pet-id>/animated-preview.png
+pets/<pet-id>/index.html
 ```
 
 Then update:
@@ -88,11 +98,15 @@ Every entry should distinguish ownership from submission logistics:
 
 - `owner` is required and names the companion owner, character owner, or original rights holder.
 - `credit` can describe who shared the entry, what public reference was used, or where the adaptation came from.
+- `preview.png` is used as the pet detail banner.
+- `animated-preview.png` is an animated PNG used on the gallery list and can be regenerated from the spritesheet.
 
 每个条目都应区分“归属”和“提交过程”：
 
 - `owner` 是必填字段，用来标明幻想朋友的主人、角色归属方或原始权利方。
 - `credit` 可用于说明分享者、公开参考来源或改编来源。
+- `preview.png` 用作宠物详情页 banner。
+- `animated-preview.png` 是用于宠物馆列表的动图 PNG，可从 spritesheet 重新生成。
 
 ## Data Shape / 数据结构
 
@@ -102,6 +116,7 @@ Each pet entry follows `schemas/pet-entry.schema.json` and includes:
 - required owner or rights-holder information
 - optional source or sharing credit
 - asset paths
+- a static banner preview and animated gallery preview
 - install metadata
 - content and license notes
 

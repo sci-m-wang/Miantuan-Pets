@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Popcorn | Miantuan Pets</title>
+    <link rel="stylesheet" href="../../site/styles.css?v=20260630-pages" />
+  </head>
+  <body data-pet-id="popcorn-xiaoyan" data-root="../..">
+    <header class="topbar">
+      <a class="brand-lockup" href="../../" aria-label="Miantuan Pets">
+        <img class="brand-mark" src="../../assets/pets/dough-king/animated-preview.png" alt="" aria-hidden="true" />
+        <span>
+          <span class="eyebrow" data-i18n="eyebrow">Curator: Dough King</span>
+          <span class="brand-name" data-i18n="title">Miantuan Pets</span>
+        </span>
+      </a>
+      <nav class="topbar-actions" aria-label="Site navigation">
+        <a class="nav-link" href="../../#gallery" data-i18n="browseCta">Browse gallery</a>
+        <a class="nav-cta" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="podNav">Create in Pod</a>
+        <div class="language-switch" aria-label="Language">
+          <button class="lang-button is-active" data-lang="en" type="button">EN</button>
+          <button class="lang-button" data-lang="zh-CN" type="button">中文</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="detail-shell">
+      <a class="back-link" href="../../#gallery" data-i18n="backToGallery">Back to gallery</a>
+      <section id="pet-detail" aria-live="polite"></section>
+    </main>
+
+    <template id="pet-detail-template">
+      <article class="detail-hero">
+        <div class="detail-banner">
+          <img alt="" />
+        </div>
+        <div class="detail-content">
+          <div class="detail-main">
+            <span class="badge"></span>
+            <h1></h1>
+            <p class="tagline"></p>
+            <p class="description"></p>
+            <div class="meta-stack">
+              <p class="meta-line owner-meta">
+                <span class="meta-label owner-label"></span>
+                <a class="owner-link" target="_blank" rel="noreferrer"></a>
+              </p>
+              <p class="meta-line credit-meta">
+                <span class="meta-label credit-label"></span>
+                <a class="credit-link" target="_blank" rel="noreferrer"></a>
+              </p>
+            </div>
+            <section class="detail-panel">
+              <h2 class="forms-title"></h2>
+              <ul class="form-list"></ul>
+            </section>
+            <section class="detail-panel install-block">
+              <span class="install-label"></span>
+              <div class="install-row">
+                <code></code>
+                <button type="button" class="copy-button" data-i18n-copy="copy">Copy</button>
+              </div>
+            </section>
+          </div>
+          <aside class="detail-side">
+            <section class="motion-panel">
+              <img alt="" />
+            </section>
+            <section class="detail-panel">
+              <h2 class="states-title"></h2>
+              <ul class="state-list"></ul>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="../../site/pet-detail.js?v=20260630-pages"></script>
+  </body>
+</html>

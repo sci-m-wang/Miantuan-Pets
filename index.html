@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Miantuan Pets</title>
-    <link rel="stylesheet" href="./site/styles.css?v=20260630-names" />
+    <link rel="stylesheet" href="./site/styles.css?v=20260630-pages" />
   </head>
   <body>
     <header class="topbar">
       <a class="brand-lockup" href="#top" aria-label="Miantuan Pets">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark" src="./assets/pets/dough-king/animated-preview.png" alt="" aria-hidden="true" />
         <span>
           <span class="eyebrow" data-i18n="eyebrow">Public companion gallery</span>
           <span class="brand-name" data-i18n="title">Miantuan Pets</span>
@@ -44,11 +44,6 @@
             </div>
           </div>
         </div>
-        <figure class="feature-rail" aria-label="Featured pets">
-          <img src="./assets/pets/luma/preview.png" alt="Luma / 曦宁" />
-          <img src="./assets/pets/dough-king/preview.png" alt="Dough King" />
-          <img src="./assets/pets/popcorn-xiaoyan/preview.png" alt="Popcorn" />
-        </figure>
       </section>
 
       <section class="pod-gateway" aria-labelledby="pod-title">
@@ -74,7 +69,7 @@
     </main>
 
     <template id="pet-card-template">
-      <article class="pet-card">
+      <article class="pet-card" tabindex="0">
         <div class="pet-media">
           <img class="pet-preview" alt="" />
         </div>
@@ -97,18 +92,11 @@
               <a class="credit-link" target="_blank" rel="noreferrer"></a>
             </p>
           </div>
-          <div class="forms"></div>
-          <div class="install-block">
-            <span class="install-label"></span>
-            <div class="install-row">
-              <code></code>
-              <button type="button" class="copy-button" data-i18n-copy="copy">Copy</button>
-            </div>
-          </div>
+          <a class="details-link" href="" data-i18n="detailsCta">View entry</a>
         </div>
       </article>
     </template>
 
-    <script type="module" src="./site/main.js?v=20260630-names"></script>
+    <script type="module" src="./site/main.js?v=20260630-pages"></script>
   </body>
 </html>

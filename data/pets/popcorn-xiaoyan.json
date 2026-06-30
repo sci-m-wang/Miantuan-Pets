@@ -61,6 +61,7 @@
   },
   "assets": {
     "preview": "assets/pets/popcorn-xiaoyan/preview.png",
+    "animatedPreview": "assets/pets/popcorn-xiaoyan/animated-preview.png",
     "contactSheet": "assets/pets/popcorn-xiaoyan/contact-sheet.png",
     "petManifest": "assets/pets/popcorn-xiaoyan/pet.json",
     "spritesheet": "assets/pets/popcorn-xiaoyan/spritesheet.webp"

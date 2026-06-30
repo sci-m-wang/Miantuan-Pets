@@ -10,13 +10,16 @@
     "assets",
     "bin",
     "data",
+    "pets",
     "schemas",
+    "scripts",
     "site",
     "index.html",
     "README.md"
   ],
   "scripts": {
     "preview": "python3 -m http.server 4173",
+    "render:previews": "python3 scripts/render-pet-previews.py --root .",
     "validate": "node scripts/validate.mjs"
   },
   "keywords": [

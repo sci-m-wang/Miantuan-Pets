@@ -85,6 +85,7 @@
   },
   "assets": {
     "preview": "assets/pets/luma/preview.png",
+    "animatedPreview": "assets/pets/luma/animated-preview.png",
     "contactSheet": "assets/pets/luma/contact-sheet.png",
     "petManifest": "assets/pets/luma/pet.json",
     "spritesheet": "assets/pets/luma/spritesheet.webp"

@@ -62,6 +62,7 @@
   },
   "assets": {
     "preview": "assets/pets/dough-king/preview.png",
+    "animatedPreview": "assets/pets/dough-king/animated-preview.png",
     "contactSheet": "assets/pets/dough-king/contact-sheet.png",
     "petManifest": "assets/pets/dough-king/pet.json",
     "spritesheet": "assets/pets/dough-king/spritesheet.webp"
