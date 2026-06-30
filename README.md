@@ -14,8 +14,8 @@ https://sci-m-wang.github.io/Miantuan-Pod/
 
 ## Current Pet / 当前宠物
 
-- **Luma**: @sci-m-wang's imaginary companion, a luminous three-form pegasus-spirit with a floating halo above her horn.
-- **Luma**：@sci-m-wang 的幻想朋友，是一位发光的三形态天马灵体伙伴，独角上方悬着光环。
+- **Luma / 曦宁**: [@sci-m-wang](https://github.com/sci-m-wang)'s imaginary companion, a luminous three-form pegasus-spirit with a floating halo above her horn.
+- **曦宁（Luma）**：[@sci-m-wang](https://github.com/sci-m-wang) 的幻想朋友，是一位发光的三形态天马灵体伙伴，独角上方悬着光环。
 - **Dough King**: a friendly guardian youkai who watches over imaginary friends.
 - **面团大王**：守护幻想朋友的友好妖怪；桌宠条目基于公开角色参考制作。
 

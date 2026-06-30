@@ -33,19 +33,31 @@ function setOptionalLink(node, label, url) {
   }
 }
 
+function githubUrlFromHandle(value) {
+  const match = String(value || "").trim().match(/^@([A-Za-z0-9-]+)$/);
+  return match ? `https://github.com/${match[1]}` : "";
+}
+
+function ownerUrl(owner) {
+  if (owner.url) return owner.url;
+  return githubUrlFromHandle(owner.display);
+}
+
 function creditInfo(pet) {
   if (!pet.credit) return null;
+  const name = text(pet.credit.name);
   return {
     label: text(pet.credit.label) || state.messages.creditLabel,
-    name: text(pet.credit.name),
-    url: pet.credit.url || "",
+    name,
+    url: pet.credit.url || githubUrlFromHandle(name),
   };
 }
 
 function shouldShowCredit(pet, credit) {
   if (!credit?.name) return false;
-  if (credit.url) return true;
-  return credit.name.trim().toLowerCase() !== pet.owner.display.trim().toLowerCase();
+  const sameName = credit.name.trim().toLowerCase() === pet.owner.display.trim().toLowerCase();
+  const sameUrl = !credit.url || credit.url === ownerUrl(pet.owner);
+  return !(sameName && sameUrl);
 }
 
 function applyMessages() {
@@ -74,7 +86,7 @@ function renderPets(pets) {
     $(".description", card).textContent = text(pet.introduction);
 
     $(".owner-label", card).textContent = state.messages.ownerLabel;
-    setOptionalLink($(".owner-link", card), pet.owner.display, pet.owner.url || "");
+    setOptionalLink($(".owner-link", card), pet.owner.display, ownerUrl(pet.owner));
 
     const credit = creditInfo(pet);
     const creditMeta = $(".credit-meta", card);
