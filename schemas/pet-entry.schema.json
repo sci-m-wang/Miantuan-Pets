@@ -11,10 +11,20 @@
     "name": { "$ref": "#/$defs/localizedString" },
     "owner": {
       "type": "object",
-      "required": ["github", "display"],
+      "required": ["display"],
       "properties": {
         "github": { "type": "string" },
-        "display": { "type": "string" }
+        "display": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    },
+    "credit": {
+      "type": "object",
+      "required": ["label", "name"],
+      "properties": {
+        "label": { "$ref": "#/$defs/localizedString" },
+        "name": { "$ref": "#/$defs/localizedString" },
+        "url": { "type": "string" }
       }
     },
     "statusLabel": { "$ref": "#/$defs/localizedString" },

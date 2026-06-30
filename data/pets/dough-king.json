@@ -6,8 +6,19 @@
     "zh-CN": "面团大王"
   },
   "owner": {
-    "github": "sci-m-wang",
-    "display": "@sci-m-wang"
+    "display": "HoYoverse",
+    "url": "https://www.hoyoverse.com/"
+  },
+  "credit": {
+    "label": {
+      "en": "Source reference",
+      "zh-CN": "参考来源"
+    },
+    "name": {
+      "en": "Genshin Impact character reference",
+      "zh-CN": "《原神》角色参考"
+    },
+    "url": "https://wiki.biligame.com/ys/%E9%9D%A2%E5%9B%A2%E5%A4%A7%E7%8E%8B"
   },
   "statusLabel": {
     "en": "Guardian youkai",
@@ -61,6 +72,6 @@
   },
   "license": {
     "code": "MIT",
-    "petAssets": "Shared by @sci-m-wang for Miantuan Pets gallery use."
+    "petAssets": "Fan-made Codex pet adaptation for Miantuan Pets gallery use. Original character reference belongs to its rights holders."
   }
 }

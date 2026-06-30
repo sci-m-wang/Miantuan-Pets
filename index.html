@@ -8,21 +8,62 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
-        <p class="eyebrow" data-i18n="eyebrow">Imaginary companion gallery</p>
-        <h1 data-i18n="title">Miantuan Pets</h1>
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">Imaginary companion archive</p>
+          <p class="brand-name" data-i18n="title">Miantuan Pets</p>
+        </div>
       </div>
-      <div class="language-switch" aria-label="Language">
-        <button class="lang-button is-active" data-lang="en" type="button">EN</button>
-        <button class="lang-button" data-lang="zh-CN" type="button">中文</button>
+      <div class="topbar-actions">
+        <a class="nav-link" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="podNav">Create a companion</a>
+        <div class="language-switch" aria-label="Language">
+          <button class="lang-button is-active" data-lang="en" type="button">EN</button>
+          <button class="lang-button" data-lang="zh-CN" type="button">中文</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="intro">
-        <p data-i18n="intro">
-          A gallery of remembered companions, dream friends, and soft little spirits you can bring back to your desktop.
-        </p>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="section-kicker" data-i18n="heroKicker">Curated Codex pets for inner companions</p>
+          <h1 data-i18n="heroTitle">A careful gallery for companions, guardians, and soft little spirits.</h1>
+          <p class="hero-lede" data-i18n="intro">
+            Miantuan Pets collects remembered companions, dream friends, friendly guardians, and small spirits as installable Codex pets.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="createCta">
+              Create your own imaginary friend
+            </a>
+            <a class="button secondary" href="#gallery" data-i18n="browseCta">Browse gallery</a>
+          </div>
+        </div>
+        <div class="pet-shelf" aria-label="Featured pets">
+          <img src="./assets/pets/luma/preview.png" alt="Luma" />
+          <img src="./assets/pets/dough-king/preview.png" alt="Dough King" />
+          <img src="./assets/pets/popcorn-xiaoyan/preview.png" alt="Popcorn" />
+        </div>
+      </section>
+
+      <section class="principles" aria-label="Gallery principles">
+        <div>
+          <span data-i18n="principleOneTitle">Remember</span>
+          <p data-i18n="principleOneBody">Start from a story, a memory, or a trusted reference.</p>
+        </div>
+        <div>
+          <span data-i18n="principleTwoTitle">Shape</span>
+          <p data-i18n="principleTwoBody">Turn the companion into a clear, public pet package.</p>
+        </div>
+        <div>
+          <span data-i18n="principleThreeTitle">Share</span>
+          <p data-i18n="principleThreeBody">Publish only the parts you are comfortable making public.</p>
+        </div>
+      </section>
+
+      <section class="gallery-heading">
+        <p class="section-kicker" data-i18n="galleryKicker">Gallery</p>
+        <h2 data-i18n="galleryTitle">Install a pet or study how each one is credited.</h2>
       </section>
 
       <section class="gallery" id="gallery" aria-live="polite"></section>
@@ -36,7 +77,7 @@
         <div class="pet-body">
           <div class="pet-heading">
             <div>
-              <p class="owner"></p>
+              <a class="credit" target="_blank" rel="noreferrer"></a>
               <h2></h2>
             </div>
             <span class="badge"></span>

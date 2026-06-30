@@ -38,6 +38,15 @@ for (const item of index.pets) {
   hasLocalized(pet.tagline, `${pet.id}.tagline`);
   hasLocalized(pet.introduction, `${pet.id}.introduction`);
 
+  if (!pet.owner || typeof pet.owner.display !== "string" || pet.owner.display.trim() === "") {
+    fail(`${pet.id}.owner.display is required`);
+  }
+
+  if (pet.credit) {
+    hasLocalized(pet.credit.label, `${pet.id}.credit.label`);
+    hasLocalized(pet.credit.name, `${pet.id}.credit.name`);
+  }
+
   if (!Array.isArray(pet.forms) || pet.forms.length === 0) {
     fail(`${pet.id} must define at least one form`);
   } else {

@@ -20,6 +20,30 @@ function text(value) {
   return value?.[state.lang] || value?.en || value?.["zh-CN"] || "";
 }
 
+function petCredit(pet) {
+  if (pet.credit) {
+    return {
+      label: text(pet.credit.label),
+      name: text(pet.credit.name),
+      url: pet.credit.url || "",
+    };
+  }
+
+  if (pet.owner?.display) {
+    return {
+      label: state.messages.sharedBy,
+      name: pet.owner.display,
+      url: "",
+    };
+  }
+
+  return {
+    label: state.messages.galleryEntry,
+    name: "",
+    url: "",
+  };
+}
+
 function applyMessages() {
   $$("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
@@ -40,7 +64,16 @@ function renderPets(pets) {
     const card = template.content.cloneNode(true);
     $(".pet-preview", card).src = pet.assets.preview;
     $(".pet-preview", card).alt = text(pet.name);
-    $(".owner", card).textContent = pet.owner.display;
+    const credit = petCredit(pet);
+    const creditNode = $(".credit", card);
+    creditNode.textContent = credit.name ? `${credit.label}: ${credit.name}` : credit.label;
+    if (credit.url) {
+      creditNode.href = credit.url;
+    } else {
+      creditNode.removeAttribute("href");
+      creditNode.removeAttribute("target");
+      creditNode.removeAttribute("rel");
+    }
     $("h2", card).textContent = text(pet.name);
     $(".badge", card).textContent = text(pet.statusLabel);
     $(".tagline", card).textContent = text(pet.tagline);

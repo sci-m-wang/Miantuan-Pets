@@ -9,13 +9,23 @@
     "github": "sci-m-wang",
     "display": "@sci-m-wang"
   },
+  "credit": {
+    "label": {
+      "en": "Shared by",
+      "zh-CN": "分享者"
+    },
+    "name": {
+      "en": "@sci-m-wang",
+      "zh-CN": "@sci-m-wang"
+    }
+  },
   "statusLabel": {
     "en": "Three forms",
     "zh-CN": "三形态"
   },
   "tagline": {
-    "en": "@sci-m-wang's imaginary companion.",
-    "zh-CN": "@sci-m-wang 的幻想朋友。"
+    "en": "A luminous imaginary companion reconstructed from childhood memory.",
+    "zh-CN": "从童年记忆中重新具像化的发光幻想朋友。"
   },
   "introduction": {
     "en": "Luma is a luminous pegasus-spirit companion reconstructed from childhood memory: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn.",

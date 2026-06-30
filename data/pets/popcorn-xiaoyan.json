@@ -9,6 +9,16 @@
     "github": "sci-m-wang",
     "display": "小焰"
   },
+  "credit": {
+    "label": {
+      "en": "Shared by",
+      "zh-CN": "分享者"
+    },
+    "name": {
+      "en": "Xiaoyan",
+      "zh-CN": "小焰"
+    }
+  },
   "statusLabel": {
     "en": "Boar companion",
     "zh-CN": "野猪伙伴"
