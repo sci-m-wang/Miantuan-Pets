@@ -4,66 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Miantuan Pets</title>
-    <link rel="stylesheet" href="./site/styles.css" />
+    <link rel="stylesheet" href="./site/styles.css?v=20260630-catalog" />
   </head>
   <body>
     <header class="topbar">
-      <div class="brand-lockup">
+      <a class="brand-lockup" href="#top" aria-label="Miantuan Pets">
         <span class="brand-mark" aria-hidden="true"></span>
-        <div>
-          <p class="eyebrow" data-i18n="eyebrow">Imaginary companion archive</p>
-          <p class="brand-name" data-i18n="title">Miantuan Pets</p>
-        </div>
-      </div>
-      <div class="topbar-actions">
-        <a class="nav-link" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="podNav">Create a companion</a>
+        <span>
+          <span class="eyebrow" data-i18n="eyebrow">Public companion gallery</span>
+          <span class="brand-name" data-i18n="title">Miantuan Pets</span>
+        </span>
+      </a>
+      <nav class="topbar-actions" aria-label="Site navigation">
+        <a class="nav-link" href="#gallery" data-i18n="browseCta">Browse gallery</a>
+        <a class="nav-cta" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="podNav">Create in Pod</a>
         <div class="language-switch" aria-label="Language">
           <button class="lang-button is-active" data-lang="en" type="button">EN</button>
           <button class="lang-button" data-lang="zh-CN" type="button">中文</button>
         </div>
-      </div>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="section-kicker" data-i18n="heroKicker">Curated Codex pets for inner companions</p>
-          <h1 data-i18n="heroTitle">A careful gallery for companions, guardians, and soft little spirits.</h1>
-          <p class="hero-lede" data-i18n="intro">
-            Miantuan Pets collects remembered companions, dream friends, friendly guardians, and small spirits as installable Codex pets.
+    <main id="top">
+      <section class="masthead" aria-labelledby="masthead-title">
+        <div class="masthead-copy">
+          <p class="section-kicker" data-i18n="collectionKicker">Codex pet gallery</p>
+          <h1 id="masthead-title" data-i18n="mastheadTitle">A public gallery for imaginary friends and their guardians.</h1>
+          <p class="masthead-intro" data-i18n="mastheadIntro">
+            Miantuan Pets collects remembered companions, dream friends, friendly guardians, and soft spirits as installable Codex pets.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="createCta">
-              Create your own imaginary friend
-            </a>
-            <a class="button secondary" href="#gallery" data-i18n="browseCta">Browse gallery</a>
+          <div class="quick-facts" aria-label="Gallery summary">
+            <div>
+              <span data-i18n="collectionLabel">Collection</span>
+              <strong data-i18n="collectionValue">3 public pets</strong>
+            </div>
+            <div>
+              <span data-i18n="standardLabel">Standard</span>
+              <strong data-i18n="standardValue">Owner, source, installable assets</strong>
+            </div>
           </div>
         </div>
-        <div class="pet-shelf" aria-label="Featured pets">
+        <figure class="feature-rail" aria-label="Featured pets">
           <img src="./assets/pets/luma/preview.png" alt="Luma" />
           <img src="./assets/pets/dough-king/preview.png" alt="Dough King" />
           <img src="./assets/pets/popcorn-xiaoyan/preview.png" alt="Popcorn" />
-        </div>
+        </figure>
       </section>
 
-      <section class="principles" aria-label="Gallery principles">
+      <section class="pod-gateway" aria-labelledby="pod-title">
         <div>
-          <span data-i18n="principleOneTitle">Remember</span>
-          <p data-i18n="principleOneBody">Start from a story, a memory, or a trusted reference.</p>
+          <p class="section-kicker" data-i18n="podKicker">Miantuan Pod</p>
+          <h2 id="pod-title" data-i18n="podTitle">Shape the companion before it becomes a pet.</h2>
         </div>
-        <div>
-          <span data-i18n="principleTwoTitle">Shape</span>
-          <p data-i18n="principleTwoBody">Turn the companion into a clear, public pet package.</p>
-        </div>
-        <div>
-          <span data-i18n="principleThreeTitle">Share</span>
-          <p data-i18n="principleThreeBody">Publish only the parts you are comfortable making public.</p>
-        </div>
+        <p data-i18n="podBody">
+          Start in Miantuan Pod when you want to remember, describe, or refine an imaginary friend before preparing a public pet entry.
+        </p>
+        <a class="button primary" href="https://sci-m-wang.github.io/Miantuan-Pod/" data-i18n="podCta">Create your own imaginary friend</a>
       </section>
 
       <section class="gallery-heading">
         <p class="section-kicker" data-i18n="galleryKicker">Gallery</p>
-        <h2 data-i18n="galleryTitle">Install a pet or study how each one is credited.</h2>
+        <div>
+          <h2 data-i18n="galleryTitle">Pets ready for Codex</h2>
+          <p data-i18n="galleryIntro">Each entry keeps ownership, source credit, and install files visible.</p>
+        </div>
       </section>
 
       <section class="gallery" id="gallery" aria-live="polite"></section>
@@ -75,24 +79,36 @@
           <img class="pet-preview" alt="" />
         </div>
         <div class="pet-body">
-          <div class="pet-heading">
+          <header class="pet-heading">
             <div>
-              <a class="credit" target="_blank" rel="noreferrer"></a>
               <h2></h2>
+              <p class="tagline"></p>
             </div>
             <span class="badge"></span>
-          </div>
-          <p class="tagline"></p>
+          </header>
           <p class="description"></p>
+          <div class="meta-stack">
+            <p class="meta-line owner-meta">
+              <span class="meta-label owner-label"></span>
+              <a class="owner-link" target="_blank" rel="noreferrer"></a>
+            </p>
+            <p class="meta-line credit-meta">
+              <span class="meta-label credit-label"></span>
+              <a class="credit-link" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
           <div class="forms"></div>
-          <div class="install-row">
-            <code></code>
-            <button type="button" class="copy-button" data-i18n-copy="copy">Copy</button>
+          <div class="install-block">
+            <span class="install-label"></span>
+            <div class="install-row">
+              <code></code>
+              <button type="button" class="copy-button" data-i18n-copy="copy">Copy</button>
+            </div>
           </div>
         </div>
       </article>
     </template>
 
-    <script type="module" src="./site/main.js"></script>
+    <script type="module" src="./site/main.js?v=20260630-catalog"></script>
   </body>
 </html>

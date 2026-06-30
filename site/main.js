@@ -20,28 +20,32 @@ function text(value) {
   return value?.[state.lang] || value?.en || value?.["zh-CN"] || "";
 }
 
-function petCredit(pet) {
-  if (pet.credit) {
-    return {
-      label: text(pet.credit.label),
-      name: text(pet.credit.name),
-      url: pet.credit.url || "",
-    };
+function setOptionalLink(node, label, url) {
+  node.textContent = label;
+  if (url) {
+    node.href = url;
+    node.target = "_blank";
+    node.rel = "noreferrer";
+  } else {
+    node.removeAttribute("href");
+    node.removeAttribute("target");
+    node.removeAttribute("rel");
   }
+}
 
-  if (pet.owner?.display) {
-    return {
-      label: state.messages.sharedBy,
-      name: pet.owner.display,
-      url: "",
-    };
-  }
-
+function creditInfo(pet) {
+  if (!pet.credit) return null;
   return {
-    label: state.messages.galleryEntry,
-    name: "",
-    url: "",
+    label: text(pet.credit.label) || state.messages.creditLabel,
+    name: text(pet.credit.name),
+    url: pet.credit.url || "",
   };
+}
+
+function shouldShowCredit(pet, credit) {
+  if (!credit?.name) return false;
+  if (credit.url) return true;
+  return credit.name.trim().toLowerCase() !== pet.owner.display.trim().toLowerCase();
 }
 
 function applyMessages() {
@@ -64,29 +68,22 @@ function renderPets(pets) {
     const card = template.content.cloneNode(true);
     $(".pet-preview", card).src = pet.assets.preview;
     $(".pet-preview", card).alt = text(pet.name);
-    const credit = petCredit(pet);
-    const creditNode = $(".credit", card);
-    creditNode.textContent = credit.name ? `${credit.label}: ${credit.name}` : credit.label;
-    if (credit.url) {
-      creditNode.href = credit.url;
-    } else {
-      creditNode.removeAttribute("href");
-      creditNode.removeAttribute("target");
-      creditNode.removeAttribute("rel");
-    }
     $("h2", card).textContent = text(pet.name);
     $(".badge", card).textContent = text(pet.statusLabel);
     $(".tagline", card).textContent = text(pet.tagline);
     $(".description", card).textContent = text(pet.introduction);
-    $("code", card).textContent = `npx miantuan-pets install ${pet.id}`;
-    $(".copy-button", card).textContent = state.messages.copy;
-    $(".copy-button", card).addEventListener("click", async (event) => {
-      await navigator.clipboard.writeText(`npx miantuan-pets install ${pet.id}`);
-      event.currentTarget.textContent = state.messages.copied;
-      setTimeout(() => {
-        event.currentTarget.textContent = state.messages.copy;
-      }, 1300);
-    });
+
+    $(".owner-label", card).textContent = state.messages.ownerLabel;
+    setOptionalLink($(".owner-link", card), pet.owner.display, pet.owner.url || "");
+
+    const credit = creditInfo(pet);
+    const creditMeta = $(".credit-meta", card);
+    if (shouldShowCredit(pet, credit)) {
+      $(".credit-label", card).textContent = credit.label;
+      setOptionalLink($(".credit-link", card), credit.name, credit.url);
+    } else {
+      creditMeta.remove();
+    }
 
     const forms = $(".forms", card);
     pet.forms.forEach((form) => {
@@ -98,6 +95,18 @@ function renderPets(pets) {
       description.textContent = text(form.description);
       item.append(title, description);
       forms.append(item);
+    });
+
+    const command = pet.install?.npm || `npx miantuan-pets install ${pet.id}`;
+    $(".install-label", card).textContent = state.messages.installLabel;
+    $("code", card).textContent = command;
+    $(".copy-button", card).textContent = state.messages.copy;
+    $(".copy-button", card).addEventListener("click", async (event) => {
+      await navigator.clipboard.writeText(command);
+      event.currentTarget.textContent = state.messages.copied;
+      setTimeout(() => {
+        event.currentTarget.textContent = state.messages.copy;
+      }, 1300);
     });
 
     gallery.append(card);
