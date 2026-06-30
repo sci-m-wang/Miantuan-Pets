@@ -1,7 +1,7 @@
 {
   "name": "miantuan-pets",
   "version": "0.1.0",
-  "description": "A bilingual gallery and installer for imaginary-friend Codex pets.",
+  "description": "A bilingual gallery and installer for imaginary-friend, guardian, and spirit Codex pets.",
   "type": "module",
   "bin": {
     "miantuan-pets": "./bin/miantuan-pets.mjs"
@@ -23,6 +23,7 @@
     "codex",
     "pets",
     "imaginary-friend",
+    "guardian",
     "gallery",
     "miantuan"
   ],

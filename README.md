@@ -1,13 +1,15 @@
 # Miantuan Pets / 面团宠物馆
 
-Miantuan Pets is a public gallery for remembered companions, dream friends, and soft little spirits that can be installed as Codex pets.
+Miantuan Pets is a public gallery for remembered companions, dream friends, their friendly guardians, and soft little spirits that can be installed as Codex pets.
 
-面团宠物馆是一个幻想朋友宠物 gallery：大家可以介绍自己的幻想朋友，也可以下载安装别人分享的 Codex pet。
+面团宠物馆是一个幻想朋友与守护者宠物 gallery：大家可以介绍自己的幻想朋友，也可以分享守护幻想朋友的友好妖怪和小灵体，并下载安装到 Codex pet。
 
 ## Current Pet / 当前宠物
 
 - **Luma**: @sci-m-wang's imaginary companion, a luminous three-form pegasus-spirit with a floating halo above her horn.
 - **Luma**：@sci-m-wang 的幻想朋友，是一位发光的三形态天马灵体伙伴，独角上方悬着光环。
+- **Dough King**: a friendly guardian youkai who watches over imaginary friends.
+- **面团大王**：守护幻想朋友的友好妖怪。
 
 ## Install A Pet / 安装宠物
 
@@ -43,7 +45,7 @@ Then open the local URL shown in the terminal.
 
 站点本身不需要账号系统。投稿、审核和发布都通过 GitHub issue 或 pull request 完成。
 
-## Submit Your Pet / 提交你的幻想朋友
+## Submit Your Pet / 提交你的宠物
 
 You can share a pet in either of these ways:
 

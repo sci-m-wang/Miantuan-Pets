@@ -8,6 +8,10 @@
     {
       "id": "popcorn-xiaoyan",
       "entry": "data/pets/popcorn-xiaoyan.json"
+    },
+    {
+      "id": "dough-king",
+      "entry": "data/pets/dough-king.json"
     }
   ]
 }

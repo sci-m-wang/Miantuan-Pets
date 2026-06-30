@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schemas/pet-entry.schema.json",
+  "id": "dough-king",
+  "name": {
+    "en": "Dough King",
+    "zh-CN": "面团大王"
+  },
+  "owner": {
+    "github": "sci-m-wang",
+    "display": "@sci-m-wang"
+  },
+  "statusLabel": {
+    "en": "Guardian youkai",
+    "zh-CN": "守护妖怪"
+  },
+  "tagline": {
+    "en": "A friendly guardian youkai who watches over imaginary friends.",
+    "zh-CN": "守护幻想朋友的友好妖怪。"
+  },
+  "introduction": {
+    "en": "Dough King is a friendly guardian youkai who watches over imaginary friends. For the desktop-pet version, it appears as a round pale ice-blue dough creature with a milky white belly band, tiny horn-like ears, teal bean eyes, a small integrated curved smile, short rounded limbs, and a curled blue tail that hides behind the body in front view. Its side profile keeps a soft, slightly thick tapir-like mouth silhouette while the front stays simple and natural.",
+    "zh-CN": "面团大王是守护幻想朋友的友好妖怪。作为桌宠版本，它呈现为浅冰蓝色的圆滚滚面团生物，有奶白色肚兜、小小角耳、青绿色豆豆眼、小小弧形笑嘴、短短圆手脚和一颗正面会藏在身后的浅蓝卷尾。侧面时，它前下方的嘴部轮廓会保留一点柔和的貘嘴厚度，正面则保持简洁自然。"
+  },
+  "forms": [
+    {
+      "id": "dough-king",
+      "name": {
+        "en": "Dough King form",
+        "zh-CN": "面团大王形态"
+      },
+      "description": {
+        "en": "A compact soft 3D-toy guardian form for calm idling, side movement, greeting, hopping, waiting, processing, and review states.",
+        "zh-CN": "适合桌宠使用的紧凑软糯 3D 玩具守护形态，用于待机、左右移动、招手、跳跃、等待、处理中和审阅状态。"
+      }
+    }
+  ],
+  "codexPet": {
+    "manifest": "assets/pets/dough-king/pet.json",
+    "spritesheet": "assets/pets/dough-king/spritesheet.webp",
+    "states": [
+      "idle",
+      "running-right",
+      "running-left",
+      "waving",
+      "jumping",
+      "failed",
+      "waiting",
+      "running",
+      "review"
+    ]
+  },
+  "assets": {
+    "preview": "assets/pets/dough-king/preview.png",
+    "contactSheet": "assets/pets/dough-king/contact-sheet.png",
+    "petManifest": "assets/pets/dough-king/pet.json",
+    "spritesheet": "assets/pets/dough-king/spritesheet.webp"
+  },
+  "install": {
+    "npm": "npx miantuan-pets install dough-king",
+    "github": "npm exec github:sci-m-wang/Miantuan-Pets -- install dough-king"
+  },
+  "license": {
+    "code": "MIT",
+    "petAssets": "Shared by @sci-m-wang for Miantuan Pets gallery use."
+  }
+}
