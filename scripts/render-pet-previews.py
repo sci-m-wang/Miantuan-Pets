@@ -46,14 +46,30 @@ def remove_chroma_edge(frame: Image.Image) -> Image.Image:
     return image
 
 
-def save_preview(frames: list[Image.Image], output: Path) -> None:
+def crop_look_frames(spritesheet: Path) -> list[Image.Image]:
+    with Image.open(spritesheet) as opened:
+        atlas = opened.convert("RGBA")
+    if atlas.size != (1536, 2288):
+        raise ValueError(f"Looking previews require a v2 atlas: {spritesheet}")
+    return [
+        atlas.crop((
+            (index % 8) * CELL_WIDTH,
+            (9 + index // 8) * CELL_HEIGHT,
+            (index % 8 + 1) * CELL_WIDTH,
+            (10 + index // 8) * CELL_HEIGHT,
+        ))
+        for index in range(16)
+    ]
+
+
+def save_preview(frames: list[Image.Image], output: Path, durations: list[int] | None = None) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     frames[0].save(
         output,
         format="PNG",
         save_all=True,
         append_images=frames[1:],
-        duration=IDLE_DURATIONS,
+        duration=durations or IDLE_DURATIONS,
         loop=0,
         disposal=2,
         optimize=False,
@@ -63,6 +79,7 @@ def save_preview(frames: list[Image.Image], output: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".")
+    parser.add_argument("--pet", help="Render only this pet id.")
     args = parser.parse_args()
 
     root = Path(args.root).expanduser().resolve()
@@ -70,11 +87,17 @@ def main() -> None:
     rendered = []
 
     for item in index["pets"]:
+        if args.pet and item["id"] != args.pet:
+            continue
         pet = read_json(root / (item.get("entry") or f"data/pets/{item['id']}.json"))
         spritesheet = root / pet["assets"]["spritesheet"]
         output = root / f"assets/pets/{pet['id']}/animated-preview.png"
         save_preview(crop_idle_frames(spritesheet), output)
         rendered.append(str(output.relative_to(root)))
+        if pet["assets"].get("lookPreview"):
+            output = root / pet["assets"]["lookPreview"]
+            save_preview(crop_look_frames(spritesheet), output, [240] * 16)
+            rendered.append(str(output.relative_to(root)))
 
     print(json.dumps({"ok": True, "rendered": rendered}, indent=2))
 

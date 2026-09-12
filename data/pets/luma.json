@@ -22,16 +22,16 @@
     "url": "https://github.com/sci-m-wang"
   },
   "statusLabel": {
-    "en": "Three forms",
-    "zh-CN": "三形态"
+    "en": "Three forms · 16 looking directions",
+    "zh-CN": "三形态 · 16个朝向"
   },
   "tagline": {
     "en": "A luminous imaginary companion reconstructed from childhood memory.",
     "zh-CN": "从童年记忆中重新具像化的发光幻想朋友。"
   },
   "introduction": {
-    "en": "Luma is a luminous pegasus-spirit companion reconstructed from childhood memory: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn.",
-    "zh-CN": "曦宁（Luma）是从童年记忆中重新具像化出来的发光天马灵体伙伴：温柔、神秘、陪伴感强，也有一点成熟姐姐的气质。她以珠光白为主色，带有温暖的棕灰色点缀，较粗的浅色光环微悬在独角上方。"
+    "en": "Luma is a luminous pegasus-spirit companion reconstructed from childhood memory: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn. She can now look around in 16 directions.",
+    "zh-CN": "曦宁（Luma）是从童年记忆中重新具像化出来的发光天马灵体伙伴：温柔、神秘、陪伴感强，也有一点成熟姐姐的气质。她以珠光白为主色，带有温暖的棕灰色点缀，较粗的浅色光环微悬在独角上方。现在支持向16个方向自然注视。"
   },
   "forms": [
     {
@@ -81,14 +81,17 @@
       "waiting",
       "running",
       "review"
-    ]
+    ],
+    "spriteVersionNumber": 2,
+    "lookDirectionCount": 16
   },
   "assets": {
     "preview": "assets/pets/luma/preview.png",
     "animatedPreview": "assets/pets/luma/animated-preview.png",
     "contactSheet": "assets/pets/luma/contact-sheet.png",
     "petManifest": "assets/pets/luma/pet.json",
-    "spritesheet": "assets/pets/luma/spritesheet.webp"
+    "spritesheet": "assets/pets/luma/spritesheet.webp",
+    "lookPreview": "assets/pets/luma/look-preview.png"
   },
   "install": {
     "npm": "npx miantuan-pets install luma",

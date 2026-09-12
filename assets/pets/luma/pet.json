@@ -2,5 +2,6 @@
   "id": "luma",
   "displayName": "曦宁",
   "description": "发光的三形态天马灵体伙伴，独角上方悬着光环。",
-  "spritesheetPath": "spritesheet.webp"
+  "spritesheetPath": "spritesheet.webp",
+  "spriteVersionNumber": 2
 }

@@ -115,7 +115,7 @@ function renderStates(pet, base) {
 }
 
 function renderInstall(pet, base) {
-  const command = pet.install?.npm || `npx miantuan-pets install ${pet.id}`;
+  const command = pet.install?.github || pet.install?.npm || `npx miantuan-pets install ${pet.id}`;
   $(".install-label", base).textContent = state.messages.installLabel;
   $("code", base).textContent = command;
   $(".copy-button", base).textContent = state.messages.copy;
@@ -136,7 +136,7 @@ function renderDetail(pet) {
   document.title = `${name} | Miantuan Pets`;
   $(".detail-banner img", detail).src = assetPath(pet.assets.preview);
   $(".detail-banner img", detail).alt = `${name} ${state.messages.bannerLabel}`;
-  $(".motion-panel img", detail).src = assetPath(pet.assets.animatedPreview || pet.assets.preview);
+  $(".motion-panel img", detail).src = assetPath(pet.assets.lookPreview || pet.assets.animatedPreview || pet.assets.preview);
   $(".motion-panel img", detail).alt = `${name} ${state.messages.motionLabel}`;
   $(".badge", detail).textContent = text(pet.statusLabel);
   $("h1", detail).textContent = name;
