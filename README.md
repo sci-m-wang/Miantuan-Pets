@@ -1,8 +1,8 @@
 # Miantuan Pets / 面团宠物馆
 
-Miantuan Pets is a public gallery for remembered companions, dream friends, their friendly guardians, and soft little spirits that can be installed as Codex pets. It is designed as a curated archive: each pet should have clear provenance, a public-facing introduction, installable assets, and enough context for others to understand what is being shared.
+Miantuan Pets is a public gallery for remembered companions, dream friends, their friendly guardians, soft little spirits, and visiting companions from other worlds that can be installed as Codex pets. It is designed as a curated archive: each pet should have clear provenance, a public-facing introduction, installable assets, and enough context for others to understand what is being shared.
 
-面团宠物馆是一个幻想朋友与守护者宠物 gallery。这里欢迎大家分享自己的幻想朋友、梦中伙伴、守护幻想朋友的友好妖怪和小灵体，并把它们整理成可安装的 Codex pet。每个条目都应有清楚的来源、公开介绍、可安装资源和必要的授权说明。
+面团宠物馆是一个幻想朋友与守护者宠物 gallery，也欢迎其他世界的伙伴来馆作客。这里欢迎大家分享自己的幻想朋友、梦中伙伴、守护幻想朋友的友好妖怪、小灵体和作客伙伴，并把它们整理成可安装的 Codex pet。每个条目都应有清楚的来源、公开介绍、可安装资源和必要的授权说明。
 
 If you want to remember or shape your own imaginary friend first, start from Miantuan Pod:
 
@@ -12,12 +12,14 @@ https://sci-m-wang.github.io/Miantuan-Pod/
 
 https://sci-m-wang.github.io/Miantuan-Pod/
 
-## Current Pet / 当前宠物
+## Current Pets / 当前宠物
 
 - **Luma / 曦宁**: [@sci-m-wang](https://github.com/sci-m-wang)'s imaginary companion, a luminous three-form pegasus-spirit with a floating halo above her horn.
 - **曦宁（Luma）**：[@sci-m-wang](https://github.com/sci-m-wang) 的幻想朋友，是一位发光的三形态天马灵体伙伴，独角上方悬着光环。
 - **Dough King**: a friendly guardian youkai who watches over imaginary friends.
 - **面团大王**：守护幻想朋友的友好妖怪；桌宠条目基于公开角色参考制作。
+- **Paimon / 派蒙**: the Traveler's best companion from Genshin Impact, visiting the gallery as a guest; her v2 pet includes 16 looking directions.
+- **派蒙**：《原神》中旅行者最好的伙伴，以作客伙伴身份来到宠物馆；v2 桌宠支持 16 个注视方向。「应急食品」只是旅途中的玩笑，派蒙要抗议！
 
 ## Install A Pet / 安装宠物
 

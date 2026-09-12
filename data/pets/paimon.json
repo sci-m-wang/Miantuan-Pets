@@ -1,0 +1,81 @@
+{
+  "$schema": "../../schemas/pet-entry.schema.json",
+  "id": "paimon",
+  "name": {
+    "en": "Paimon",
+    "zh-CN": "派蒙"
+  },
+  "owner": {
+    "display": "HoYoverse",
+    "url": "https://www.hoyoverse.com/"
+  },
+  "credit": {
+    "label": {
+      "en": "Character source",
+      "zh-CN": "角色来源"
+    },
+    "name": {
+      "en": "Genshin Impact",
+      "zh-CN": "《原神》"
+    },
+    "url": "https://genshin.hoyoverse.com/en/home"
+  },
+  "statusLabel": {
+    "en": "Visiting guest · Traveler's companion",
+    "zh-CN": "来馆作客 · 旅行者的伙伴"
+  },
+  "tagline": {
+    "en": "The Traveler's best companion, stopping by Miantuan Pets.",
+    "zh-CN": "旅行者最好的伙伴，来面团宠物馆串个门。"
+  },
+  "introduction": {
+    "en": "Paimon comes from Genshin Impact and travels with the Traveler as the best companion ever! She is a guide, a chatterbox on the road, and the occasional subject of an \"emergency food\" joke (Paimon objects!). Today she is visiting Miantuan Pets, bringing her little cape and plenty of curiosity to meet the companions here.",
+    "zh-CN": "派蒙来自《原神》，是旅行者的伙伴，最好的伙伴！她是旅途中的向导、聊天搭子，也是偶尔被打趣叫作「应急食品」的那一位（派蒙要抗议！）。这次，她以作客伙伴的身份来到面团宠物馆，带着小披风和满满好奇心，来认识这里的新朋友。"
+  },
+  "forms": [
+    {
+      "id": "floating-companion",
+      "name": {
+        "en": "Floating travel companion",
+        "zh-CN": "悬浮旅伴"
+      },
+      "description": {
+        "en": "A small floating companion with white hair, a star-shaped hair ornament, a golden crown, and a starry cape. This v2 pet has 16 natural looking directions, greetings, jumps, and a focused working loop.",
+        "zh-CN": "小小的悬浮伙伴，保留白发、星形发饰、金色头冠和星空披风。v2 桌宠支持 16 个自然注视方向，也会招手、跳跃和认真思考。"
+      }
+    }
+  ],
+  "codexPet": {
+    "manifest": "assets/pets/paimon/pet.json",
+    "spritesheet": "assets/pets/paimon/spritesheet.webp",
+    "states": [
+      "idle",
+      "running-right",
+      "running-left",
+      "waving",
+      "jumping",
+      "failed",
+      "waiting",
+      "running",
+      "review"
+    ],
+    "spriteVersionNumber": 2,
+    "lookDirectionCount": 16
+  },
+  "assets": {
+    "preview": "assets/pets/paimon/preview.png",
+    "animatedPreview": "assets/pets/paimon/animated-preview.png",
+    "contactSheet": "assets/pets/paimon/contact-sheet.png",
+    "petManifest": "assets/pets/paimon/pet.json",
+    "spritesheet": "assets/pets/paimon/spritesheet.webp",
+    "lookPreview": "assets/pets/paimon/look-preview.png"
+  },
+  "install": {
+    "npm": "npx miantuan-pets install paimon",
+    "github": "npm exec github:sci-m-wang/Miantuan-Pets -- install paimon"
+  },
+  "license": {
+    "code": "MIT",
+    "petAssets": "Fan-made Codex pet adaptation shared for Miantuan Pets gallery use. Paimon and Genshin Impact belong to their original rights holders. This visiting-guest entry is not an official HoYoverse release."
+  }
+}

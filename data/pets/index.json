@@ -12,6 +12,10 @@
     {
       "id": "dough-king",
       "entry": "data/pets/dough-king.json"
+    },
+    {
+      "id": "paimon",
+      "entry": "data/pets/paimon.json"
     }
   ]
 }
