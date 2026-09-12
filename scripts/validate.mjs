@@ -42,6 +42,8 @@ for (const item of index.pets) {
     fail(`${pet.id}.owner.display is required`);
   }
 
+  hasLocalized(pet.reference?.name, `${pet.id}.reference.name`);
+
   if (pet.credit) {
     hasLocalized(pet.credit.label, `${pet.id}.credit.label`);
     hasLocalized(pet.credit.name, `${pet.id}.credit.name`);

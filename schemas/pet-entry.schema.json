@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Miantuan pet entry",
   "type": "object",
-  "required": ["id", "name", "owner", "tagline", "introduction", "forms", "codexPet", "assets", "install"],
+  "required": ["id", "name", "owner", "reference", "tagline", "introduction", "forms", "codexPet", "assets", "install"],
   "properties": {
     "id": {
       "type": "string",
@@ -18,9 +18,19 @@
         "url": { "type": "string" }
       }
     },
+    "reference": {
+      "type": "object",
+      "required": ["name"],
+      "description": "The character or visual reference, separate from the companion owner and sharing credit.",
+      "properties": {
+        "name": { "$ref": "#/$defs/localizedString" },
+        "url": { "type": "string" }
+      }
+    },
     "credit": {
       "type": "object",
       "required": ["label", "name"],
+      "description": "Optional sharing or adaptation credit; put reference sources in reference.",
       "properties": {
         "label": { "$ref": "#/$defs/localizedString" },
         "name": { "$ref": "#/$defs/localizedString" },

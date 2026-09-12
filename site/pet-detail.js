@@ -9,7 +9,7 @@ const $ = (selector, base = document) => base.querySelector(selector);
 const $$ = (selector, base = document) => Array.from(base.querySelectorAll(selector));
 
 async function readJson(path) {
-  const response = await fetch(path);
+  const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Unable to load ${path}`);
   }
@@ -79,6 +79,9 @@ function applyMessages() {
 function renderMeta(pet, base) {
   $(".owner-label", base).textContent = state.messages.ownerLabel;
   setOptionalLink($(".owner-link", base), pet.owner.display, ownerUrl(pet.owner));
+
+  $(".reference-label", base).textContent = state.messages.referenceLabel;
+  setOptionalLink($(".reference-link", base), text(pet.reference.name), pet.reference.url);
 
   const credit = creditInfo(pet);
   const creditMeta = $(".credit-meta", base);

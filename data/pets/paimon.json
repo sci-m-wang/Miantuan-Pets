@@ -9,11 +9,7 @@
     "display": "HoYoverse",
     "url": "https://www.hoyoverse.com/"
   },
-  "credit": {
-    "label": {
-      "en": "Character source",
-      "zh-CN": "角色来源"
-    },
+  "reference": {
     "name": {
       "en": "Genshin Impact",
       "zh-CN": "《原神》"

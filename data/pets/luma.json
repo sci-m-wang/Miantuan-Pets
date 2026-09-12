@@ -10,6 +10,12 @@
     "display": "@sci-m-wang",
     "url": "https://github.com/sci-m-wang"
   },
+  "reference": {
+    "name": {
+      "en": "Childhood memory",
+      "zh-CN": "童年记忆"
+    }
+  },
   "credit": {
     "label": {
       "en": "Shared by",
@@ -22,16 +28,16 @@
     "url": "https://github.com/sci-m-wang"
   },
   "statusLabel": {
-    "en": "Three forms · 16 looking directions",
-    "zh-CN": "三形态 · 16个朝向"
+    "en": "Imaginary friend",
+    "zh-CN": "幻想朋友"
   },
   "tagline": {
-    "en": "A luminous imaginary companion reconstructed from childhood memory.",
+    "en": "A luminous imaginary friend reconstructed from childhood memory.",
     "zh-CN": "从童年记忆中重新具像化的发光幻想朋友。"
   },
   "introduction": {
-    "en": "Luma is a luminous pegasus-spirit companion reconstructed from childhood memory: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn. She can now look around in 16 directions.",
-    "zh-CN": "曦宁（Luma）是从童年记忆中重新具像化出来的发光天马灵体伙伴：温柔、神秘、陪伴感强，也有一点成熟姐姐的气质。她以珠光白为主色，带有温暖的棕灰色点缀，较粗的浅色光环微悬在独角上方。现在支持向16个方向自然注视。"
+    "en": "Luma is an imaginary friend reconstructed from childhood memory, appearing as a luminous pegasus spirit: gentle, mysterious, playful, and slightly older-sister-like. Her palette is pearl white with warm brown-gray accents, and a thick pale halo floats just above her horn. She can now look around in 16 directions.",
+    "zh-CN": "曦宁（Luma）是从童年记忆中重新具像化出来的幻想朋友，以发光的天马灵体形象出现：温柔、神秘、陪伴感强，也有一点成熟姐姐的气质。她以珠光白为主色，带有温暖的棕灰色点缀，较粗的浅色光环微悬在独角上方。现在支持向16个方向自然注视。"
   },
   "forms": [
     {

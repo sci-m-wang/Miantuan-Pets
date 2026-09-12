@@ -14,8 +14,10 @@ https://sci-m-wang.github.io/Miantuan-Pod/
 
 ## Current Pets / 当前宠物
 
-- **Luma / 曦宁**: [@sci-m-wang](https://github.com/sci-m-wang)'s imaginary companion, a luminous three-form pegasus-spirit with a floating halo above her horn.
+- **Luma / 曦宁**: [@sci-m-wang](https://github.com/sci-m-wang)'s imaginary friend, a luminous three-form pegasus-spirit with a floating halo above her horn.
 - **曦宁（Luma）**：[@sci-m-wang](https://github.com/sci-m-wang) 的幻想朋友，是一位发光的三形态天马灵体伙伴，独角上方悬着光环。
+- **Popcorn / 爆米花**: Xiaoyan's imaginary friend, with an appearance based on Genshin Impact.
+- **爆米花**：小焰的幻想朋友，形象参考《原神》。
 - **Dough King**: a friendly guardian youkai who watches over imaginary friends.
 - **面团大王**：守护幻想朋友的友好妖怪；桌宠条目基于公开角色参考制作。
 - **Paimon / 派蒙**: the Traveler's best companion from Genshin Impact, visiting the gallery as a guest; her v2 pet includes 16 looking directions.
@@ -96,17 +98,19 @@ Please share only what you are comfortable making public. The gallery should con
 
 请只提交你愿意公开的内容。gallery 只需要最终公开介绍和宠物包，不需要回忆过程、访谈记录或未确认的推断。
 
-Every entry should distinguish ownership from submission logistics:
+Every entry must keep ownership and reference sources in two independent fields:
 
 - `owner` is required and names the companion owner, character owner, or original rights holder.
-- `credit` can describe who shared the entry, what public reference was used, or where the adaptation came from.
+- `reference` is required and names the character or visual reference in `name` (English and Chinese), with an optional `url`. For an original remembered companion, describe the memory or original concept here.
+- `credit` is optional and records sharing or adaptation credit. It does not replace `owner` or `reference`.
 - `preview.png` is used as the pet detail banner.
 - `animated-preview.png` is an animated PNG used on the gallery list and can be regenerated from the spritesheet.
 
-每个条目都应区分“归属”和“提交过程”：
+每个条目必须把“归属”和“参考来源”存为两个独立字段：
 
 - `owner` 是必填字段，用来标明幻想朋友的主人、角色归属方或原始权利方。
-- `credit` 可用于说明分享者、公开参考来源或改编来源。
+- `reference` 是必填字段，使用中英双语 `name` 标明角色或形象的参考来源，可附 `url`。原创的回忆伙伴可填写童年记忆或原创构想。
+- `credit` 是可选的分享者或改编者信息，不能替代 `owner` 或 `reference`。
 - `preview.png` 用作宠物详情页 banner。
 - `animated-preview.png` 是用于宠物馆列表的动图 PNG，可从 spritesheet 重新生成。
 
@@ -116,13 +120,14 @@ Each pet entry follows `schemas/pet-entry.schema.json` and includes:
 
 - bilingual name, tagline, introduction, and form descriptions
 - required owner or rights-holder information
-- optional source or sharing credit
+- required reference source, separate from ownership
+- optional sharing or adaptation credit
 - asset paths
 - a static banner preview and animated gallery preview
 - install metadata
 - content and license notes
 
-每个宠物条目都要包含中英双语介绍、必要的归属信息、可选的来源或分享说明、资源路径、安装信息以及授权说明。
+每个宠物条目都要包含中英双语介绍、独立的归属与参考来源字段、可选的分享或改编说明、资源路径、安装信息以及授权说明。
 
 ## CLI / 命令行
 

@@ -6,10 +6,24 @@ body:
   - type: input
     id: owner
     attributes:
-      label: Public GitHub handle
-      placeholder: "@your-name"
+      label: Owner / 归属
+      description: Name the imaginary friend's owner or the character's rights holder, separately from its reference source.
+      placeholder: "Xiaoyan / 小焰, @your-name, or a character owner"
     validations:
       required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Reference source / 参考来源
+      description: Name the work, character, childhood memory, or original concept behind the appearance. Include a public link if available.
+      placeholder: "Genshin Impact / 原神, childhood memory / 童年记忆"
+    validations:
+      required: true
+  - type: input
+    id: shared-by
+    attributes:
+      label: Sharing credit / 分享者
+      description: Optional name or public handle of the person sharing or adapting this pet.
   - type: input
     id: pet-id
     attributes:

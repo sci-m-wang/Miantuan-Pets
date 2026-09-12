@@ -8,7 +8,7 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
 async function readJson(path) {
-  const response = await fetch(path);
+  const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Unable to load ${path}`);
   }
@@ -96,6 +96,9 @@ function renderPets(pets) {
 
     $(".owner-label", card).textContent = state.messages.ownerLabel;
     setOptionalLink($(".owner-link", card), pet.owner.display, ownerUrl(pet.owner));
+
+    $(".reference-label", card).textContent = state.messages.referenceLabel;
+    setOptionalLink($(".reference-link", card), text(pet.reference.name), pet.reference.url);
 
     const credit = creditInfo(pet);
     const creditMeta = $(".credit-meta", card);

@@ -407,6 +407,7 @@ main {
 }
 
 .owner-link,
+.reference-link,
 .credit-link {
   min-width: 0;
   overflow-wrap: anywhere;
@@ -417,6 +418,7 @@ main {
 }
 
 .owner-link[href]:hover,
+.reference-link[href]:hover,
 .credit-link[href]:hover {
   color: var(--accent-ink);
   text-decoration: underline;

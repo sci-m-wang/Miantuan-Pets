@@ -9,6 +9,13 @@
     "github": "sci-m-wang",
     "display": "小焰"
   },
+  "reference": {
+    "name": {
+      "en": "Genshin Impact",
+      "zh-CN": "《原神》"
+    },
+    "url": "https://genshin.hoyoverse.com/en/home"
+  },
   "credit": {
     "label": {
       "en": "Shared by",
@@ -20,16 +27,16 @@
     }
   },
   "statusLabel": {
-    "en": "Boar companion",
-    "zh-CN": "野猪伙伴"
+    "en": "Imaginary friend",
+    "zh-CN": "幻想朋友"
   },
   "tagline": {
     "en": "Xiaoyan's imaginary friend.",
     "zh-CN": "小焰的幻想朋友。"
   },
   "introduction": {
-    "en": "Popcorn is Xiaoyan's round red-and-charcoal boar companion: sleepy-eyed, stubborn, a little grumpy, and quietly loyal. He has a white mohawk crest, dramatic white brows, tiny tusks, a peach-pink snout, and white-socked little hooves.",
-    "zh-CN": "爆米花是小焰的红黑圆胖野猪伙伴：眼神困困的，有点倔，有点臭脸，但其实很忠诚。它有白色背鬃、夸张白眉、小獠牙、粉色鼻子，以及像穿了白袜的小蹄子。"
+    "en": "Popcorn is Xiaoyan's imaginary friend, with a round red-and-charcoal boar appearance based on Genshin Impact: sleepy-eyed, stubborn, a little grumpy, and quietly loyal. He has a white mohawk crest, dramatic white brows, tiny tusks, a peach-pink snout, and white-socked little hooves.",
+    "zh-CN": "爆米花是小焰的幻想朋友，形象参考《原神》中的红黑圆胖野猪：眼神困困的，有点倔，有点臭脸，但其实很忠诚。它有白色背鬃、夸张白眉、小獠牙、粉色鼻子，以及像穿了白袜的小蹄子。"
   },
   "forms": [
     {
